@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<section>
+    <h3>ajax: get方式</h3>
+    <button type="button" id="getUserBtn">获取数据</button>
+</section>
+<section>
+    <h3>fetch: application/x-www-form-urlencoded</h3>
+    <hr />
+    <form id="loginForm" class="form">
+        <div>
+            <label for="">用户名：</label>
+            <input id="name" name="name" type="text" />
+        </div>
+        <div>
+            <label for="">密码</label>
+            <input id="password" type="password" name="password" />
+        </div>
+        <div>
+            <label for=""></label>
+            <button id="loginBtn" type="submit">提交</button>
+        </div>
+    </form>
+</section>
+
+<section>
+    <h3>ajax: application/json</h3>
+    <hr />
+    <form class="form" action="/register" method="post">
+        <div>
+            <label for="">用户名：</label>
+            <input id="username" name="username" type="text" />
+        </div>
+        <div>
+            <label for="">邮箱地址：</label>
+            <input id="email" name="email" type="text" />
+        </div>
+        <div>
+            <label for="">年龄</label>
+            <input id="age" type="number" name="age" />
+        </div>
+        <div>
+            <label for=""></label>
+            <button id="registerBtn" type="submit">提交</button>
+        </div>
+    </form>
+</section>
+
+<section>
+    <h3>ajax: multipart/form-data</h3>
+    <hr />
+    <form id="addNewsForm" class="form" action="/addNews" method="post" enctype="multipart/form-data" />
+        <div>
+            <label for="">标题：</label>
+            <input name="title" type="text" />
+        </div>
+        <div>
+            <label for="">内容：</label>
+            <textarea name="content" type="text"></textarea>
+        </div>
+        <div>
+            <label for="">缩略图</label>
+            <input type="file" name="file" />
+        </div>
+        <div>
+            <label for=""></label>
+            <button type="submit">提交</button>
+        </div>
+    </form>
+</section>
+
+</body>
+<script src="./js/index.js"></script>
+</html>
